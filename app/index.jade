@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Memory
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/pure-min.css')
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.5.0-rc-1/grids-responsive-min.css')
+    link(rel='stylesheet', href='./css/app.css')
+  body
+    #controls
+      button#start Start Game
+      #clock(data-time='60') 60
+
+    table#board
+      tbody
+        - for(var i = 0; i < 4; i++)
+          tr
+            - for(var j = 0; j < 5; j++)
+              td
+                .flipper
+                  .front
+                  .back
+
+    script(src='./js/vendor/jquery-2.1.0.js')
+    script(src='./js/source/main.js')
